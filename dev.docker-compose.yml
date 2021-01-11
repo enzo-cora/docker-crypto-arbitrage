@@ -1,0 +1,21 @@
+version : '3.8'
+
+services:
+   api-arbitrage:
+      container_name : api_arbitrage
+      image: node:14.15.4
+      volumes:
+         - ./api-crypto-arbitrage:/usr/src/app
+
+   front-arbitrage:
+      image: angular:11.0.5
+      container_name: site_arbitrage
+      volumes:
+         - ./front-crypto-arbitrage:/usr/src/app
+   mongo-arbitrage:    
+      volumes: 
+         - db_arbitrage:/data/db
+         
+volumes:
+    db_arbitrage:
+        external: true

@@ -1,0 +1,21 @@
+version : '3.8'
+
+services:
+   api-arbitrage:
+      build:
+         context: https://github.com/enzo-cora/api-crypto-arbitrage.git
+         dockerfile: test.Dockerfile
+      container_name : test-api-arbitrage
+
+   front-arbitrage:
+      build:
+         context: https://github.com/enzo-cora/front-crypto-arbitrage.git
+         dockerfile: test.Dockerfile
+      container_name: test-site-arbitrage
+      
+   mongo-arbitrage:    
+      volumes: 
+         - db_test_arbitrage:/data/db
+
+volumes: 
+    db_test_arbitrage:

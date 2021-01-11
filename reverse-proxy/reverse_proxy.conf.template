@@ -1,0 +1,22 @@
+upstream api_arbitrage{
+        server ${API_HOSTNAME}:${API_PORT};
+}
+upstream web_site{
+        server ${SITE_HOSTNAME}:${SITE_PORT};
+}
+
+server {
+    listen 80;
+    server_name ${PROXY_HOSTNAME};
+
+    location /${API_NAME} {
+        proxy_pass http://api_arbitrage;
+        error_log /var/log/nginx/log_api_arbitrage;
+    }
+
+    location / {
+        proxy_pass http://web_site;
+        error_log /var/log/nginx/log_site_arbitrage;
+    }
+	
+}
