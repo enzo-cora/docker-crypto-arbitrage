@@ -11,8 +11,8 @@ $ make reset-test
 # DEV ENV docker > 3.4 : 
 - make dev env from project
 ```sh 
-$ git@github.com:enzo-cora/front-crypto-arbitrage.git
-$ git@github.com:enzo-cora/api-crypto-arbitrage.git
+$ git clone git@github.com:enzo-cora/front-crypto-arbitrage.git
+$ git clone git@github.com:enzo-cora/api-crypto-arbitrage.git
 $ make init
 $ make dev
 ```
