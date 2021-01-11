@@ -9,4 +9,3 @@ mongo -- "$MONGO_INITDB_DATABASE" <<EOF
     var role2 = {role : "readWrite", db: '$MONGO_DB_DEV'} ;
     db.createUser({ user: user, pwd: passwd, roles: [ role1, role2 ]});
 EOF
-
