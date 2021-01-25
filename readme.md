@@ -49,4 +49,5 @@ $ make reset
 
 ### ---Debuger npm---
 - DEBUG= "api:*,front:*" | " "  (permet d'activer ou desactiver le debuger du front et de l'api) 
+- DEBUG_COLORS=true
 

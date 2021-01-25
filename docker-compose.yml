@@ -16,6 +16,7 @@ x-var:
    - &apiHost API_HOSTNAME=$API_HOSTNAME
    - &coinapiKey COINAPI_KEY=$COINAPI_KEY 
    - &debug DEBUG=$DEBUG
+   - &debugColor DEBUG_COLORS=$DEBUG_COLORS
    
    - &frontHost SITE_HOSTNAME=$SITE_HOSTNAME
    - &frontPort  SITE_PORT=$SITE_PORT
@@ -44,6 +45,7 @@ services:
             - *apiName
             - *coinapiKey
             - *debug
+            - *debugColor
           
         command: npm run dev
         networks:
