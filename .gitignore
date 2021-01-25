@@ -1,4 +1,4 @@
 **/node_modules
 /api-crypto-arbitrage
 /front-crypto-arbitrage
-**/.env
+.env
