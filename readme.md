@@ -36,7 +36,6 @@ $ make reset
 - API_HOSTNAME={string} (pour le DNS docker)
 - COINAPI_KEY={string} (clé d'api du site [coinapi](https://www.coinapi.io/Pricing))
 - NODE_ENV= "development" | "test" | "production"
-- DEBUG= "*" | " "  (permet d'activer ou desactiver le debuger) 
 
 ### ---Base de données---
 - MONGO_HOSTNAME= {string} (pour le DNS docker)
@@ -47,4 +46,7 @@ $ make reset
 - MONGO_DB= {string}
 - MONGO_DB_DEV= {string}
 - MONGO_PORT= {number}
+
+### ---Debuger npm---
+- DEBUG= "api:*,front:*" | " "  (permet d'activer ou desactiver le debuger du front et de l'api) 
 
