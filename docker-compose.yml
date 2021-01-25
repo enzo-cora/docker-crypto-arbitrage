@@ -15,10 +15,13 @@ x-var:
    - &apiName API_NAME=$API_NAME
    - &apiHost API_HOSTNAME=$API_HOSTNAME
    - &coinapiKey COINAPI_KEY=$COINAPI_KEY 
+   - &debug DEBUG=$DEBUG
    
    - &frontHost SITE_HOSTNAME=$SITE_HOSTNAME
    - &frontPort  SITE_PORT=$SITE_PORT
    - &proxyHost  PROXY_HOSTNAME=$PROXY_HOSTNAME
+   
+
 
   
 services:
@@ -40,6 +43,7 @@ services:
             - *apiNodeEnv
             - *apiName
             - *coinapiKey
+            - *debug
           
         command: npm run dev
         networks:
