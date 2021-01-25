@@ -47,3 +47,6 @@ $ make reset
 - MONGO_DB_DEV= {string}
 - MONGO_PORT= {number}
 
+### ---Debuger npm---
+DEBUG= "*" | " "  (permet d'activer ou desactiver le debuger) 
+
