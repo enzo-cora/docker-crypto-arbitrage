@@ -46,6 +46,7 @@ services:
             - *coinapiKey
             - *debug
             - *debugColor
+            - DEBUG_SHOW_HIDDEN=true
           
         command: npm run dev
         networks:
