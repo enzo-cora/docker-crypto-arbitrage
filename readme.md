@@ -11,8 +11,8 @@ $ make reset-test
 # DEV ENV docker > 3.4 : 
 - make dev env from project
 ```sh 
-$ git clone git@github.com:enzo-cora/front-crypto-arbitrage.git
-$ git clone git@github.com:enzo-cora/api-crypto-arbitrage.git
+$ git clone git@github.com:enzocorp/front-admin-pannel.git
+$ git clone git@github.com:enzocorp/api-filter-symbols.git
 $ make init
 $ make dev
 ```
@@ -31,7 +31,7 @@ $ make reset
 - SITE_PORT={number}
 
 ### ---Api---
-- API_NAME={string} (nom de l'api qui sera utilisé dans l'url)
+- API_NAME='api1' (nom de l'api qui sera utilisé dans l'url)
 - API_PORT={number}
 - API_HOSTNAME={string} (pour le DNS docker)
 - COINAPI_KEY={string} (clé d'api du site [coinapi](https://www.coinapi.io/Pricing))
@@ -48,6 +48,6 @@ $ make reset
 - MONGO_PORT= {number}
 
 ### ---Debuger npm---
-- DEBUG= "api:*,front:*" | " "  (permet d'activer ou desactiver le debuger du front et de l'api) 
+- DEBUG= "api:*,front:*" | ""  (permet d'activer ou desactiver le debuger du front et de l'api) 
 - DEBUG_COLORS=true
 
