@@ -4,17 +4,17 @@ services :
     install-api-arbitrage:
         image:  node:14.15.4
         volumes:
-           -  ./api-crypto-arbitrage:/usr/src/app
+           -  ./api-filter-symbols:/usr/src/app
         working_dir:  /usr/src/app
         command:  npm  i
 
     install-front-arbitrage:
         build:
-           context: ./front-crypto-arbitrage
+           context: ./front-admin-pannel
            dockerfile: dev.Dockerfile
         image: angular:11.0.5
         volumes:
-           -  ./front-crypto-arbitrage:/usr/src/app
+           -  ./front-admin-pannel:/usr/src/app
         working_dir: /usr/src/app
         command:  npm  i
 

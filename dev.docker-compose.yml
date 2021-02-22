@@ -5,13 +5,13 @@ services:
       container_name : api_arbitrage
       image: node:14.15.4
       volumes:
-         - ./api-crypto-arbitrage:/usr/src/app
+         - ./api-filter-symbols:/usr/src/app
 
    front-arbitrage:
       image: angular:11.0.5
       container_name: site_arbitrage
       volumes:
-         - ./front-crypto-arbitrage:/usr/src/app
+         - ./front-admin-pannel:/usr/src/app
    mongo-arbitrage:    
       volumes: 
          - db_arbitrage:/data/db
